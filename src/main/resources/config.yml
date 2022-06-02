@@ -1,0 +1,24 @@
+coin-item:
+  material: 'SUNFLOWER'
+  display-name: '&5Coin'
+  lore:
+    - '&fBasic economy coin'
+  modeldata: '128'
+
+# Per player timer to pay invoice.
+# Time calculates in seconds.
+invoice-timer: 3600
+
+invoice-message: 'You received {invoice} coins for playing!'
+
+invoice:
+  default:
+    permission: 'invoice.default'
+    coin-amount: 1
+    commands: []
+    priority: 1
+  vip:
+    permission: 'invoice.vip'
+    coin-amount: 3
+    commands: []
+    priority: 2

@@ -1,0 +1,17 @@
+name: aslTimedPlayerActions
+version: '${project.version}'
+main: ru.asl.tpa.TPA
+api-version: 1.18
+authors: [ Snoop1CattZ69 ]
+description: Invokes per player commands and actions once per timer
+website: https://studio.aslcraft.ru/
+
+commands:
+  ta:
+    usage: '/ta reload'
+    permission: 'timedplayeractions.reload'
+    permission-message: '§You can''t do that'
+    aliases:
+      - 'timedactions'
+      - 'timedplayeractions'
+    description: 'Reloads entire plugin data'
