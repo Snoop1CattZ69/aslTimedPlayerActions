@@ -16,7 +16,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class YAML {
 
-	protected YamlConfiguration	yaml	= new YamlConfiguration();
+	protected YamlConfiguration	yaml = new YamlConfiguration();
 	protected File				file;
 
 	public YAML(File file, JavaPlugin plugin, String extendedPath) {
@@ -31,10 +31,12 @@ public class YAML {
 
 				if (plugin != null && plugin.getResource(file.getName()) != null) {
 					final String ex = extendedPath;
+
 					if (ex == null)
 						exportFile(file.getName(), plugin, plugin.getDataFolder());
 					else
 						exportFile(file.getName(), plugin, plugin.getDataFolder() + "/" + ex);
+
 					load();
 				}
 				else {

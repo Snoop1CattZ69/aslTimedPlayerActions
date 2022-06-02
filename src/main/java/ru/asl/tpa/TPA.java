@@ -33,14 +33,12 @@ import static org.bukkit.ChatColor.translateAlternateColorCodes;
 
 public final class TPA extends JavaPlugin {
 
-    static TPA instance;
-
-    static YAML mainConfig;
-    static YAML playerData;
-
-    static ItemStack coin;
-    static long invoiceTimer;
-    static String invoiceMessage;
+    static TPA          instance;
+    static YAML         mainConfig;
+    static YAML         playerData;
+    static ItemStack    coin;
+    static long         invoiceTimer;
+    static String       invoiceMessage;
 
     @Override
     public void onEnable() {
@@ -73,15 +71,15 @@ public final class TPA extends JavaPlugin {
         init();
     }
 
-    void log(String msg) {
+    void log(@NotNull String msg) {
         Bukkit.getConsoleSender().sendMessage(ChatColor.YELLOW + msg);
     }
 
-    void error(String msg) {
+    void error(@NotNull String msg) {
         Bukkit.getConsoleSender().sendMessage(ChatColor.RED + msg);
     }
 
-    @NotNull static String c(String msg) { return translateAlternateColorCodes('&', msg); }
+    @NotNull static String c(@NotNull String msg) { return translateAlternateColorCodes('&', msg); }
 
     void loadConfig() {
         String matName = mainConfig.getString("coin-item.material");
